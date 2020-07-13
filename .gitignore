@@ -1,0 +1,4 @@
+# virtual environment
+env
+.ipynb_checkpoints
+.idea
