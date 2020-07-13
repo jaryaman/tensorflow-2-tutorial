@@ -10,6 +10,11 @@ You know the drill. First, make a [virtual environment](https://packaging.python
 pip install -U -r requirements.txt
 ```
 
+Then install the `utls` package
+```shell script
+pip install -e .
+```
+
 ## Verify TensorFlow installation
 
 ```shell script
