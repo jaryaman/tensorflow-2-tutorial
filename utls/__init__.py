@@ -1,4 +1,8 @@
+from IPython import get_ipython
 import matplotlib.pyplot as plt
+import tensorflow as tf
+import tensorflow_hub as hub
+
 
 def plot(n_rows=1, n_cols=1, fig_size=5):
     """
@@ -19,3 +23,19 @@ def plot(n_rows=1, n_cols=1, fig_size=5):
     if n_rows*n_cols > 1:
         axs = axs.ravel()
     return fig, axs
+
+
+def auto_reload():
+    """
+    Let python functions be updated whilst inside an iPython/Jupyter session
+    """
+    ipython = get_ipython()
+    ipython.magic("reload_ext autoreload")
+    ipython.magic("autoreload 2")
+
+
+def tf_status():
+    print("Version: ", tf.__version__)
+    print("Eager mode: ", tf.executing_eagerly())
+    print("Hub version: ", hub.__version__)
+    print("GPU is", "available" if tf.config.experimental.list_physical_devices("GPU") else "NOT AVAILABLE")
