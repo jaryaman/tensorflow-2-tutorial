@@ -4,3 +4,6 @@ env
 .idea
 *.egg-info
 **/__pycache__
+
+# data
+notebooks/aclImdb

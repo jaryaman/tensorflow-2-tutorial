@@ -6,3 +6,4 @@ numpy
 tensorflow
 tensorflow-hub
 tfds-nightly
+tqdm
